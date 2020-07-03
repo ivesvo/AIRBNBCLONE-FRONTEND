@@ -36,3 +36,47 @@
     transform: rotate(360deg);
   }
 }
+.card{
+  width: 225px;
+
+}
+.card-img{
+  width:100%;
+  border-radius: 10px;
+  
+}
+.country{
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.card-body{
+  padding: 0 0 0 10px !important;
+  
+}
+.card{
+  min-height: 100px;
+  padding-bottom: 50px;
+}
+.card-title{
+  font-size: 16px !important;
+ 
+}
+.card-text{
+  font-size: 14px !important;
+}
+.country{
+  margin: 10px 0;
+}
+.heart-hover{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: white;
+  justify-content: center;
+  display: flex;
+}
+.flex1{
+  display: flex;
+  justify-content: space-between;
+}
