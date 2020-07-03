@@ -33,7 +33,7 @@ const ExperiencesList = () => {
   } else return <></>;
 };
 
-const Experience = ({ title, pictureUrl, country, price, duration }) => {
+const Experience = ({ title, pictureUrl, country, price, duration, _id }) => {
   return (
     <Card className="card">
       <Card.Img
@@ -68,6 +68,7 @@ const Experience = ({ title, pictureUrl, country, price, duration }) => {
         <Card.Text>
           Starting from $ {price} / {duration} hour
         </Card.Text>
+        <a href={"/exps/" + _id} className="stretched-link"></a>
       </Card.Body>
     </Card>
   );
