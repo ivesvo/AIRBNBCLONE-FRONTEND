@@ -1,6 +1,7 @@
 import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Nav, Button, Form, FormControl, Navbar, Col } from 'react-bootstrap'
+import NewExp from './NewExp'
 
 
 export default function Navigation() {
@@ -13,8 +14,8 @@ export default function Navigation() {
                     <Navbar.Brand href="#home"><img style={{marginLeft:"30px"}} alt="logo" width="130" src="https://japanesquest.com/wp-content/uploads/2017/10/airbnb-logo.png" /></Navbar.Brand>
 
                     <Nav className="nav">
-                        <Nav.Link href="#home">Host Your Home</Nav.Link>
-                        <Nav.Link href="#features">Host An Experience</Nav.Link>
+                        
+                        <Nav.Link href="/addexp">Host An Experience</Nav.Link>
                         <Nav.Link href="#features">Help</Nav.Link>
                         <Nav.Link href="#features">Log In</Nav.Link>
                         <Nav.Link href="#features">Sign Up</Nav.Link>
