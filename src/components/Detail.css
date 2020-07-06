@@ -1,0 +1,233 @@
+.banner {
+    background-color: black;
+    min-height: 100px;
+    padding-bottom: 100px;
+  }
+  .logo img {
+  width: 100px;
+    margin-top: 30px;
+  }
+  .logo{
+      margin-bottom: 50px;
+  }
+  .input-detail{
+      width: 220px;
+      height: 48px ;
+      border-radius: 30px;
+      background-color: #484848;
+      border: none;
+      color: white;
+      margin-top: 20px;
+      
+  }
+  .fix-input{
+      display: flex;
+      justify-content: center;
+  }
+  .btn-primary{
+      background-color: #484848 !important;
+      border: none !important;
+      border-radius: 30px !important;
+      width: 82px !important;
+      height: 42px !important;
+      font-size: 14px !important;
+      margin-top: 25px;
+  }
+  ::placeholder {
+      color: white;
+  }
+  img{
+      max-width: 100%;
+  }
+  .col-lg-3{
+      padding: 0 3px !important;
+  }
+  .col-lg-2{
+      padding: 0 3px !important;
+  }
+  .col-lg-4{
+      padding: 0 3px !important;
+  }
+  .badge-detail{
+      text-transform: uppercase;
+  }
+  .title{
+      height: 50px;
+  }
+  .img-column{
+      display: flex;
+      flex-direction: column;
+  }
+  .slider{
+      margin: 20px auto 30px auto;
+  }
+  .info-detail{
+      color: white;
+      width: 90%;
+  }
+  .nav-detail-right{
+      display: flex;
+      justify-content: flex-end;
+  }
+  .btn-help{
+      width: 60px !important;
+      background-color: black !important;
+      margin-right: 10px;
+  }
+  .btn-help:hover{
+      background-color: #484848 !important;
+  }
+  
+  
+  .dropbtn {
+      background-color: black !important;
+      margin-top: 25px;
+      color: white;
+      width: 70px !important;
+      font-size: 16px;
+      border: none;
+      cursor: pointer;
+      font-size: 14px;
+      margin-right: 10px;
+    }
+    
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      border-radius: 15px;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    
+    .dropdown-content a:hover {background-color: #f1f1f1}
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    
+    .dropdown:hover .dropbtn {
+      background-color: #484848 !important;
+      width: 70px !important;
+      height: 42px !important;
+     border-radius: 30px;
+    }
+  
+    .fa-globe{
+        font-size: 18px;
+        margin: 0 5px;
+    }
+  
+    
+    .fa-angle-down{
+      font-size: 18px;
+  }
+  .line h6{
+     
+      border-top: 1px solid #262626 ;
+      width: 600px;
+      padding: 30px 0;
+      color: white;
+      border-bottom: 1px solid #262626 ;
+  }
+  .flex3{
+      display: flex;
+  }
+  .duration{
+      margin-right: 50px;
+  }
+  .fa-clock{
+      margin: 30px 0 20px 0;
+      color: #A7A7A7;
+  }
+  .fa-user-friends{
+      margin: 30px 0 20px 0;
+      color: #A7A7A7;
+  }
+  .fa-comments{
+      margin: 30px 0 20px 0;
+      color: #A7A7A7;
+  }
+  .hosted{
+      margin-left: 50px;
+  }
+  .flex3 p{
+      color: white;
+  }
+  .flex3 h5{
+      color: #A7A7A7;
+  }
+  .wat-will-do{
+      margin: 100px;
+  }
+  .try-sth-new{
+      background-color: #F2F2F2;
+      min-height: 100px;
+  }
+  .sth-new-item{
+      margin: 130px 0;
+      display: flex;
+      justify-content: space-between;
+  }
+  .new-item{
+      width: 200px;
+  }
+  .new-item h6{
+      margin: 10px 0;
+  }
+  .your-host{
+      margin: 100px 0;
+  }
+  .host-btn{
+      width: 148px !important;
+      height: 48px !important;
+      color: #008489 !important;
+      background-color: white !important;
+      border: 2px solid #008489 !important;
+      border-radius: 5px !important;
+      font-weight: bold !important;
+      font-size: 16px !important;
+  }
+  .host-title h6{
+      font-size: 24px;
+      
+  }
+  .host-title p{
+      margin: 30px 0;
+      font-size: 18px;
+  }
+  .bring-circle{
+     
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid black;
+  }
+  .fa-check{
+      
+      justify-content: center;
+      margin-top: 6px;
+      margin-left: 6px;
+  }
+  .bring-info{
+      display: flex;
+      border-bottom: 1px solid #EBEBEB;
+      padding-bottom: 30px;
+      margin: 10px 0;
+  }
+  .bring-info p{
+      margin-left: 30px;
+  }

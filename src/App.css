@@ -47,3 +47,59 @@ h4{
   border: 1px solid black !important;
   background-color: white !important;
 }
+
+.title{
+  display: flex;
+  justify-content: start;
+  padding:  24vh 20px ;
+}
+
+.card-img{
+  width:50%;
+  
+  border-radius: 10px;
+  
+}
+.country{
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+.card-body{
+  padding: 0 0 0 10px !important;
+  
+}
+.card{
+  /* width: 400px; */
+  min-height: 100px;
+  padding-bottom: 50px;
+  border: transparent !important;
+}
+.card-title{
+  font-size: 16px !important;
+ 
+}
+.card-text{
+  font-size: 14px !important;
+}
+.country{
+  margin: 10px 0;
+}
+.heart-hover{
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: white;
+  justify-content: center;
+  display: flex;
+}
+
+.flex1{
+  display: flex;
+  justify-content: space-between;
+}
+
+.explist{
+  margin: 0px 30px !important;
+  
+}

@@ -13,25 +13,25 @@ function App() {
       <Jumbotron/>
       <ExpList/> */}
       <Router>
-      <Switch>
-     
-        <Route path="/addexp">
-          <NewExp />
-        </Route>
-        <Route path="/">
-          <ExpList />
-        </Route>
-        <Route path="/detail">
-          <Detail />
-        </Route>
-      </Switch>
-    </Router>
-      
+        <Switch>
+
+
+          <Route exact={true} path="/addexp">
+            <NewExp />
+          </Route>
+          <Route exact={true} path="/">
+            <ExpList />
+          </Route>
+          <Route exact={true} path="/exps/:expId">
+            <Detail />
+          </Route>
+
+        </Switch>
+      </Router>
+
     </div>
   );
 }
 
 export default App;
 
-
-// hahahahahah
