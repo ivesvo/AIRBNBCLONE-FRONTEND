@@ -93,7 +93,6 @@ const Experience = ({ title, pictureURL, country, price, duration, _id }) => {
         <Card style={{ maxWidth: '20rem' }} className="card">
             <Card.Img
                 variant="top"
-
                 resizeMode='cover'
                 src={pictureURL[4]}
                 alt="something"
@@ -105,7 +104,7 @@ const Experience = ({ title, pictureURL, country, price, duration, _id }) => {
                     {" "}
                     <Badge variant="secondary" className="badge">
                         Coming soon
-            </Badge>
+                    </Badge>
                     <div className="heart-hover">
                         <i
                             className="far fa-heart "
@@ -124,6 +123,8 @@ const Experience = ({ title, pictureURL, country, price, duration, _id }) => {
                 <Card.Title className="card-title">{title}</Card.Title>
                 <Card.Text>
                     Starting from $ {price} / {duration} minute
+                    <div>★ 5.0</div>
+                    
           </Card.Text>
                 <Link to={"/exps/" + _id} className="stretched-link" />
             </Card.Body>

@@ -14,7 +14,7 @@ export default function Jumbotron() {
         }} >
             <Row className="title">
             <Col lg={3}>
-                <h1>Online Experiences</h1>
+                <h1 className="h1-title">Online Experiences</h1>
                 <h4>Unique activities to do from home, including cooking experiences with world-renowned chefs</h4>
             </Col>
             {/* <Col lg={4}><h4>Unique activities to do from home, including cooking experiences with world-renowned chefs</h4></Col> */}
