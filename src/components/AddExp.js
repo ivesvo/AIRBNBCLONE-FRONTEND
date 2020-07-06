@@ -6,7 +6,7 @@ const AddExp = () => {
   const [pictureUrl, setPictureUrl] = useState("");
   const [price, setPrice] = useState(0);
   const [duration, setDuration] = useState(0);
-
+  const [whatToBring, setWhatToBring] = useState([]);
   const createExp = async (e) => {
     e.preventDefault();
     const expData = {
@@ -15,6 +15,7 @@ const AddExp = () => {
       country,
       price,
       duration,
+      whatToBring,
     };
     const newExp = await fetch("http://localhost:5000/exps", {
       method: "POST",
@@ -66,6 +67,13 @@ const AddExp = () => {
           type="text"
           name="picture url"
           onChange={(e) => setPictureUrl(e.target.value)}
+        />
+        <br />
+        <label htmlFor="whatToBring">What to bring</label>
+        <input
+          type="text"
+          name="what To Bring"
+          onChange={(e) => setWhatToBring(e.target.value)}
         />
         <br />
         <input type="submit" value="create experiences" />

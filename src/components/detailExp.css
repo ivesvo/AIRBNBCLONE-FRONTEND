@@ -51,6 +51,9 @@ img{
 .badge-detail{
     text-transform: uppercase;
 }
+.title{
+    height: 50px;
+}
 .img-column{
     display: flex;
     flex-direction: column;
@@ -131,4 +134,100 @@ img{
   
   .fa-angle-down{
     font-size: 18px;
+}
+.line h6{
+   
+    border-top: 1px solid #262626 ;
+    width: 600px;
+    padding: 30px 0;
+    color: white;
+    border-bottom: 1px solid #262626 ;
+}
+.flex3{
+    display: flex;
+}
+.duration{
+    margin-right: 50px;
+}
+.fa-clock{
+    margin: 30px 0 20px 0;
+    color: #A7A7A7;
+}
+.fa-user-friends{
+    margin: 30px 0 20px 0;
+    color: #A7A7A7;
+}
+.fa-comments{
+    margin: 30px 0 20px 0;
+    color: #A7A7A7;
+}
+.hosted{
+    margin-left: 50px;
+}
+.flex3 p{
+    color: white;
+}
+.flex3 h5{
+    color: #A7A7A7;
+}
+.wat-will-do{
+    margin: 100px;
+}
+.try-sth-new{
+    background-color: #F2F2F2;
+    min-height: 100px;
+}
+.sth-new-item{
+    margin: 130px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.new-item{
+    width: 200px;
+}
+.new-item h6{
+    margin: 10px 0;
+}
+.your-host{
+    margin: 100px 0;
+}
+.host-btn{
+    width: 148px !important;
+    height: 48px !important;
+    color: #008489 !important;
+    background-color: white !important;
+    border: 2px solid #008489 !important;
+    border-radius: 5px !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+}
+.host-title h6{
+    font-size: 24px;
+    
+}
+.host-title p{
+    margin: 30px 0;
+    font-size: 18px;
+}
+.bring-circle{
+   
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+.fa-check{
+    
+    justify-content: center;
+    margin-top: 6px;
+    margin-left: 6px;
+}
+.bring-info{
+    display: flex;
+    border-bottom: 1px solid #EBEBEB;
+    padding-bottom: 30px;
+    margin: 10px 0;
+}
+.bring-info p{
+    margin-left: 30px;
 }
