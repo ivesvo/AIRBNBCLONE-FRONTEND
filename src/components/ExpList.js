@@ -102,8 +102,8 @@ const Experience = ({ title, pictureURL, country, price, duration, _id }) => {
             <Card.ImgOverlay>
                 <Card.Title className="flex1">
                     {" "}
-                    <Badge variant="secondary" className="badge">
-                        Coming soon
+                    <Badge className="badge">
+                        COMING SOON
                     </Badge>
                     <div className="heart-hover">
                         <i
