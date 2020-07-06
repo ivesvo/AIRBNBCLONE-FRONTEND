@@ -10,6 +10,7 @@ export default function Jumbotron() {
              <div className="jumbotron" style={{
             backgroundImage:`url("https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=1600&h=838&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F28%2F2020%2F04%2F08%2Fairbnb-virtual-experiences-BNBV0420.jpg")`, 
             backgroundImageWidth: '100vw',
+            backgroundSize: "cover"
         }} >
             <Row className="title">
             <Col lg={3}>

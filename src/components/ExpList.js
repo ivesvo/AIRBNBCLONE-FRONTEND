@@ -7,6 +7,7 @@ import Jumbotron from './Jumbotron'
 import NewExp from "./NewExp";
 import { Card, Row, Container, Col, Badge } from "react-bootstrap";
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
+import PageLink from './PageLink'
 
 
 // import Pagination from "react-pagination-library";
@@ -16,17 +17,17 @@ export default function ExperienceList() {
     const [experience, setExperience] = useState([]);
     let [pageNumber, setPageNumber] = useState(1);
     let [maxPageNum, setMaxPageNum] = useState(1)
-    let [minPrice,setMinPrice]= useState(1)
-    let [maxPrice,setMaxPrice]=useState(1000)
+    let [minPrice, setMinPrice] = useState(1)
+    let [maxPrice, setMaxPrice] = useState(1000)
 
     useEffect(() => {
-        axios.get('http://localhost:5000/experiences/?page=${pageNum}&minPrice=${min').then((res) => {
+        axios.get(`http://localhost:5000/experiences/?page=${pageNumber}`).then((res) => {
             console.log(res.data.data)
             setExperience(res.data.data)
 
 
         })
-    }, []); //stop updating every seconds 
+    }, [pageNumber]); //stop updating every seconds 
 
     const goNextPage = () => {
         setPageNumber(pageNumber + 1)
@@ -43,8 +44,20 @@ export default function ExperienceList() {
             <div>
                 <Navbar />
                 <Jumbotron />
-                <a href="" onClick={goPrevPage}>Prev</a>
-                <a href="" onClick={goNextPage}>Next</a>
+               
+
+                <div className="d-flex justify-content-end" style={{margin:"0px 20px"}}>
+                <PageLink disabled={pageNumber===1} handleClick={goPrevPage}>
+                <i class="fal fa-chevron-left"></i>
+
+
+                </PageLink>
+                <PageLink handleClick={goNextPage}>
+                <i class="fal fa-chevron-right"></i>
+
+                </PageLink>
+                </div>
+
                 {/* <div>
                     <Rheostat
                         min={minPrice}
@@ -80,7 +93,7 @@ const Experience = ({ title, pictureURL, country, price, duration, _id }) => {
         <Card style={{ maxWidth: '20rem' }} className="card">
             <Card.Img
                 variant="top"
-              
+
                 resizeMode='cover'
                 src={pictureURL[4]}
                 alt="something"

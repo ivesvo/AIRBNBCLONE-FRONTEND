@@ -14,7 +14,7 @@ export class YourHost extends Component {
               <div></div>
               <div className="host-title">
                  <Image style={{width:"130px"}}src="https://i.pinimg.com/originals/84/96/ca/8496ca85ecfc7a2be6c0b1b649652578.jpg" roundedCircle />
-                <h6>Take A Chef</h6>
+                <h6>Hello World!</h6>
                 <p>
                  {this.props.description}
                 </p>

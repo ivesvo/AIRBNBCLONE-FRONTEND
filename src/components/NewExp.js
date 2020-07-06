@@ -7,17 +7,22 @@ const NewExp = () => {
   const [pictureUrl, setPictureUrl] = useState("");
   const [price, setPrice] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [description, setDescription] = useState("");
+  const [tags,setTags] = useState([])
+
 
   const createExp = async (e) => {
     e.preventDefault();
     const expData = {
       title,
+      description,
       pictureUrl,
       country,
       price,
       duration,
+      tags
     };
-    const newExp = await fetch("http://localhost:5000/exps", {
+    const newExp = await fetch("http://localhost:5000/experiences", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -68,6 +73,22 @@ const NewExp = () => {
           type="text"
           name="picture url"
           onChange={(e) => setPictureUrl(e.target.value)}
+        />
+        <br />
+
+        <label htmlFor="title">Description</label>
+        <input
+          type="text"
+          name="picture url"
+          onChange={(e) => setDescription(e.target.value)}
+        />
+        <br />
+
+        <label htmlFor="title">Tag</label>
+        <input
+          type="text"
+          name="picture url"
+          onChange={(e) => setTags([e.target.value])}
         />
         <br />
         <input type="submit" value="create experiences" />
