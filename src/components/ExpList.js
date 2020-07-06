@@ -80,7 +80,7 @@ const Experience = ({ title, pictureURL, country, price, duration, _id }) => {
         <Card style={{ maxWidth: '20rem' }} className="card">
             <Card.Img
                 variant="top"
-                height="400px"
+              
                 resizeMode='cover'
                 src={pictureURL[4]}
                 alt="something"

@@ -4,7 +4,10 @@ import { Row, Container, Col, Button, Badge } from "react-bootstrap";
 import "./Detail.css";
 import ExpList from "./ExpList";
 import Description from "./Description";
+import YourHost from "./YourHost"
+import WhatToBring from './WhatToBring'
 import axios from 'axios'
+
 
 
 
@@ -155,7 +158,9 @@ export default function DetailExp() {
           </Row>
         </Container>
       </div>
-      <Description />
+      <Description description={experience.description}/>
+      <YourHost description={experience.description}/>
+      <WhatToBring items={experience.items}/>
     </div>
   );
 }

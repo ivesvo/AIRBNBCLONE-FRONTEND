@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Row, Container, Col, Button, Badge } from "react-bootstrap";
-const WhatToBring = () => {
+const WhatToBring = ({ items }) => {
   const [detailExp, setDetailExp] = useState([]);
 
   useEffect(() => {
@@ -16,12 +16,20 @@ const WhatToBring = () => {
             <h1>What to bring</h1>
           </Col>
           <Col lg={8}>
-            <div className="bring-info">
-              <div className="bring-circle">
-                <i class="far fa-check"></i>
-              </div>
-              <p>An open mind and flexible attitude</p>
-            </div>
+
+            {items.map((item) => {
+              return (
+                <span>
+                  <div className="bring-info">
+                  <div className="bring-circle">
+                    <i class="far fa-check"></i></div>
+                    <div>  {item} </div>
+                    
+                    </div>
+                    
+                </span>
+              )})}
+
           </Col>
         </Row>
       </Container>

@@ -74,8 +74,8 @@ export class Description extends Component {
             </Row>
           </Container>
         </div>
-        <YourHost />
-        <WhatToBring />
+       
+        
       </div>
     );
   }
