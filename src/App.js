@@ -1,22 +1,40 @@
 import React from 'react';
 import './App.css';
-import ExperienceList from './components/ExperienceList';
-import Navbar from './components/Navbar';
-import Jumbotron from './components/Jumbotron'
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import NewExp from './components/NewExp'
+import ExpList from './components/ExpList'
+import Detail from './components/Detail'
+import 'rheostat/initialize';
+import 'rheostat/css/rheostat.css';
+
 
 function App() {
 
   return (
     <div className="App">
-      <Navbar/>
+      {/* <Navbar/>
       <Jumbotron/>
-      <ExperienceList/>
-      
+      <ExpList/> */}
+      <Router>
+        <Switch>
+
+
+          <Route exact={true} path="/addexp">
+            <NewExp />
+          </Route>
+          <Route exact={true} path="/">
+            <ExpList />
+          </Route>
+          <Route exact={true} path="/exps/:expId">
+            <Detail />
+          </Route>
+
+        </Switch>
+      </Router>
+
     </div>
   );
 }
 
 export default App;
 
-
-// hahahahahah
