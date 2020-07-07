@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Card, Row, Container, Col, Badge, Pagination } from "react-bootstrap";
+import Rheostat from "rheostat";
 
 const ExperiencesList = () => {
   const [exp, setExp] = useState([]);
-  const [pageNum, setPageNum] = useState();
+  const [pageNum, setPageNum] = useState(1);
+  const [maxPageNum, setMaxPageNum] = useState(1);
+  const [minPrice, setMinPrice] = useState(1);
+  const [maxPrice, setMaxPrice] = useState(1000);
   useEffect(() => {
     async function fetchData() {
       const data = await fetch("http://localhost:5000/exps");
@@ -19,12 +23,17 @@ const ExperiencesList = () => {
   const goNextPage = () => {
     setPageNum(pageNum + 1);
   };
+  const handleChange = (e) => {
+    setMinPrice(e.values[0]);
+    setMaxPrice(e.values[1]);
+  };
   if (exp != null) {
     return (
       <div>
         <h1>Experiences</h1>
         <Pagination disabled={pageNum == 1} />
         <Pagination />
+
         <Container>
           <Row>
             {exp.map((e) => {

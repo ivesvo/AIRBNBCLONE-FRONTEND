@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Row, Container, Col, Button, Badge } from "react-bootstrap";
 import "./detailExp.css";
@@ -6,6 +6,7 @@ import ExperiencesList from "./ExperiencesList";
 import Description from "./Description";
 export default function DetailExp() {
   let { expId } = useParams();
+
   return (
     <div>
       <div className="banner">
@@ -28,7 +29,7 @@ export default function DetailExp() {
                 ></i>
                 <input
                   type="text"
-                  placeholder="       Add a location"
+                  placeholder="            Add a location"
                   class="input-detail"
                 />
               </div>
@@ -98,16 +99,17 @@ export default function DetailExp() {
               <Badge variant="light" className="badge-detail">
                 <i class="fas fa-play"></i> online experience
               </Badge>
-              {/* <div> {title}</div>
-            <div>{country}</div> */}
 
               <div className="info-detail">
                 <h3>Michelin Star Chef - Cristina Bowerman</h3>
                 <h6>Rome, Italy</h6>
-                <Badge variant="secondary">
-                  Cooking
-                  {/* {badge} */}
-                </Badge>
+                <Badge variant="secondary">Cooking</Badge>
+              </div>
+              <div>
+                <Button>
+                  <a href={`/${expId}/update`}>Update</a>
+                </Button>
+                <Button>Delete</Button>
               </div>
             </Col>
 

@@ -231,3 +231,30 @@ img{
 .bring-info p{
     margin-left: 30px;
 }
+.bg-footer{
+    background-color: #F7F7F7;
+    border-top: 1px solid #DDDDDD;
+}
+.footer{
+    margin: 30px 0;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #DDDDDD;
+}
+.social-footer{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
+}
+.social i{
+    margin: 2px 15px 0 15px;
+    font-size: 20px;
+    color: #222222;
+}
+.form-update{
+   display: flex;
+   flex-direction: column;
+}
+
+.form-update .btn-primary{
+   margin: 0 auto;
+}

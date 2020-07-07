@@ -42,6 +42,7 @@ const AddExp = () => {
         <input
           type="text"
           name="country"
+          value={country}
           onChange={(e) => setCountry(e.target.value)}
         />
         <br />
