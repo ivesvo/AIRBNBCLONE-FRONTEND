@@ -4,6 +4,9 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import NewExp from './components/NewExp'
 import ExpList from './components/ExpList'
 import Detail from './components/Detail'
+import 'rheostat/initialize';
+import 'rheostat/css/rheostat.css';
+
 
 function App() {
 

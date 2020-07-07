@@ -1,8 +1,10 @@
 import React, {useEffect,useState} from "react";
 import { useParams } from "react-router-dom";
-import { Row, Container, Col, Button, Badge } from "react-bootstrap";
+import { Row, Container, Col, Button, Badg,Navbar, Badge } from "react-bootstrap";
 import "./Detail.css";
 import ExpList from "./ExpList";
+import Footer from './Footer'
+import NavbarDetail from './NavbarDetail'
 import Description from "./Description";
 import YourHost from "./YourHost"
 import WhatToBring from './WhatToBring'
@@ -21,18 +23,18 @@ export default function DetailExp() {
         setExperience(res.data.data)
     })
 }, []); // avoiding infinite loop
-  if(experience.length ==0)
+  if(experience.length == 0)
     return <></>
   
   return (
     <div>
+      <NavbarDetail/>
       <div className="banner">
         <Container>
-          <Row>
+          
+          {/* <Row>
             <Col lg={2} md={2} sm={2}>
-              <div class="logo">
-                <img src=""></img>
-              </div>
+            <Navbar.Brand href="/exps"><img style={{marginLeft:"30px"}} alt="logo" width="130" src="https://japanesquest.com/wp-content/uploads/2017/10/airbnb-logo.png" /></Navbar.Brand>
             </Col>
             <Col lg={7} md={7} sm={7}>
               <div className="fix-input">
@@ -41,12 +43,12 @@ export default function DetailExp() {
                   style={{
                     marginTop: 30,
                     position: "relative",
-                    marginLeft: 30,
+                    marginLeft: 100,
                   }}
                 ></i>
                 <input
                   type="text"
-                  placeholder="Add a location"
+                  placeholder="            Add a location"
                   class="input-detail"
                 />
               </div>
@@ -58,21 +60,21 @@ export default function DetailExp() {
                   <i class="fas fa-angle-down"></i>
                 </Button>
                 <div class="dropdown-content">
-                  <a href="#">Link 1</a>
-                  <a href="#">Link 2</a>
-                  <a href="#">Link 3</a>
+                  <a href="#">English</a>
+                  <a href="#">Vietnamese</a>
+                  
                 </div>
               </div>
 
               <Button className="btn-help">Help</Button>
               <Button className="btn-signup">
                 Sign Up
-                {/* {expId} */}
+             
               </Button>
             </Col>
-          </Row>
+          </Row> */}
 
-          <Row className="slider">
+          <Row style={{marginTop:"20px"}}>
             <img
               width={320}
               height={448}
@@ -113,8 +115,8 @@ export default function DetailExp() {
 
           <Row>
             <Col lg={4}>
-              <Badge variant="light" className="badge-detail">
-                <i class="fas fa-play"></i> online experience
+              <Badge variant="light" style={{marginTop:"20px"}} className="badge-detail">
+              <i class="fas fa-play"></i> ONLINE EXPERIENCE
               </Badge>
               {/* <div> {title}</div>
             <div>{country}</div> */}
@@ -133,7 +135,7 @@ export default function DetailExp() {
             <Col lg={8}>
               <div className="line">
                 <h6>
-                  Book and join this experience from your computer, phone, or
+                  <img width="25px" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/pager_1f4df.png"/>  Book and join this experience from your computer, phone, or
                   tablet.
                 </h6>
               </div>
@@ -141,7 +143,7 @@ export default function DetailExp() {
                 <div className="duration">
                   <i className="fas fa-clock"></i>
                   <h5>Duration</h5>
-                  <p>{experience.duration} minutes</p>
+                  <p>{experience.duration} hours</p>
                 </div>
                 <div className="group-size">
                   <i className="fas fa-user-friends"></i>
@@ -159,8 +161,10 @@ export default function DetailExp() {
         </Container>
       </div>
       <Description description={experience.description}/>
-      <YourHost description={experience.description}/>
+      <YourHost description={experience.description} hostname={experience.hostname} hostpictureURL={experience.hostpictureURL
+}/>
       <WhatToBring items={experience.items}/>
+      <Footer/>
     </div>
   );
 }

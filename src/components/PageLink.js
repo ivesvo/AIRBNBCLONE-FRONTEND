@@ -1,10 +1,10 @@
 import React from 'react'
 
 
-const PageLink = ({ disabled, handleClick, children}) => {
+const PageLink = ({ disabled, handleClick, children, pageNumber, maxPageNum}) => {
     if (disabled){
         return <div onClick={handleClick} className="btn disabled">
-            {children}
+            {children}    
         </div>
     }
     return (

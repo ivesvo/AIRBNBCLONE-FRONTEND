@@ -9,6 +9,7 @@ const NewExp = () => {
   const [duration, setDuration] = useState(0);
   const [description, setDescription] = useState("");
   const [tags,setTags] = useState([])
+  const [hostname, setHostName] = useState("")
 
 
   const createExp = async (e) => {
@@ -20,7 +21,8 @@ const NewExp = () => {
       country,
       price,
       duration,
-      tags
+      tags,
+      hostname
     };
     const newExp = await fetch("http://localhost:5000/experiences", {
       method: "POST",
@@ -84,6 +86,14 @@ const NewExp = () => {
         />
         <br />
 
+        <label htmlFor="country">Host Name</label>
+        <input
+          type="text"
+          name="hostname"
+          onChange={(e) => setHostName(e.target.value)}
+        />
+        <br />
+
         <label htmlFor="title">Tag</label>
         <input
           type="text"
@@ -91,7 +101,7 @@ const NewExp = () => {
           onChange={(e) => setTags([e.target.value])}
         />
         <br />
-        <input type="submit" value="create experiences" />
+        <input type="submit" value="Create" />
       </form>
     </div>
   );

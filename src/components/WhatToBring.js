@@ -23,7 +23,7 @@ const WhatToBring = ({ items }) => {
                   <div className="bring-info">
                   <div className="bring-circle">
                     <i class="far fa-check"></i></div>
-                    <div>  {item} </div>
+                    <div>{item}</div>
                     
                     </div>
                     
