@@ -64,8 +64,13 @@ export default function ExperienceList() {
       const handleTagsClick = (e) =>{
         const tag = tags.find((item)=>item.tag === e.tag)
         console.log(tag)
-        
-      }
+        axios.get(`http://localhost:5000/tags/${tag._id}`).then((res) => {
+            console.log(res.data.data)
+            setExperience(res.data.data)
+
+
+      })
+    };
 
     if (experience == null) {
         return (

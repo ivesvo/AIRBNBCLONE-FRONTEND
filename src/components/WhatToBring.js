@@ -20,10 +20,10 @@ const WhatToBring = ({ items }) => {
             {items.map((item) => {
               return (
                 <span>
-                  <div className="bring-info">
+                  <div className="bring-info" >
                   <div className="bring-circle">
                     <i class="far fa-check"></i></div>
-                    <div>{item}</div>
+                    <div style={{marginLeft:"20px"}}>{item}</div>
                     
                     </div>
                     

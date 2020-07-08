@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import '../App.css';
+import {Form, Button} from 'react-bootstrap'
 
 const NewExp = () => {
   const [title, setTitle] = useState("");
@@ -35,9 +36,118 @@ const NewExp = () => {
   };
   return (
     <div className="App">
-        <div><h2>Create Your Amazing Online Experience</h2></div>
-      <form onSubmit={createExp}>
-        <label htmlFor="title">Title</label>
+        <div 
+        style={{margin:"30px"}}><h2>Create Your Amazing Online Experience</h2></div>
+      <Form onSubmit={createExp} style={{margin:"30px"}}>
+      <Form.Group controlId="formBasicEmail">
+       
+        <Form.Control placeholder="Title"  
+          type="text"
+          name="title"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)} />
+        <Form.Text className="text-muted">
+         
+        </Form.Text>
+     </Form.Group>
+
+     <Form.Group controlId="formBasicEmail">
+       
+        <Form.Control placeholder="Description" 
+          as="textarea" 
+          rows="3" 
+          type="text"
+          name="title"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)} />
+        <Form.Text className="text-muted">
+         
+        </Form.Text>
+     </Form.Group>
+
+     <Form.Group controlId="formBasicEmail">
+       
+        <Form.Control placeholder="Country" 
+     
+          type="text"
+          name="country"
+          value={country}
+          onChange={(e) => setCountry(e.target.value)} />
+        <Form.Text className="text-muted">
+         
+        </Form.Text>
+     </Form.Group>
+
+
+     <Form.Group controlId="formBasicEmail">
+       
+        <Form.Control placeholder="Price" 
+
+          type="number"
+          name="price"
+          value={price}
+          onChange={(e) => setPrice(e.target.value)} />
+        <Form.Text className="text-muted">
+         
+        </Form.Text>
+     </Form.Group>
+     
+
+
+     <Form.Group controlId="formBasicEmail">
+       
+        <Form.Control placeholder="Duration" 
+     
+          type="number"
+          name="title"
+          value={duration}
+          onChange={(e) => setDuration(e.target.value)} />
+        <Form.Text className="text-muted">
+         
+        </Form.Text>
+     </Form.Group>
+
+     <Form.Group controlId="formBasicEmail">
+       
+        <Form.Control placeholder="Host Name" 
+          
+          type="text"
+          name="hostname"
+          value={hostname}
+          onChange={(e) => setHostName(e.target.value)} />
+        <Form.Text className="text-muted">
+         
+        </Form.Text>
+     </Form.Group>
+
+     <Form.Group controlId="formBasicEmail">
+       
+        <Form.Control placeholder="Tag" 
+          
+          type="text"
+          name="tag"
+          value={tags}
+          onChange={(e) => setTags(e.target.value)} />
+        <Form.Text className="text-muted">
+         
+        </Form.Text>
+     </Form.Group>
+
+
+     <Form.Group controlId="formBasicEmail">
+       
+        <Form.Control placeholder="PictureURL" 
+          
+          type="text"
+          name="pictureURL"
+          value={pictureUrl}
+          onChange={(e) => setPictureUrl(e.target.value)} />
+        <Form.Text className="text-muted">
+         
+        </Form.Text>
+     </Form.Group>
+
+        {/* <label htmlFor="title">Title</label>
         <input
           type="text"
           name="title"
@@ -100,9 +210,13 @@ const NewExp = () => {
           name="picture url"
           onChange={(e) => setTags([e.target.value])}
         />
-        <br />
-        <input type="submit" value="Create" />
-      </form>
+        <br /> */}
+        <Button style={{color:"white", backgroundColor:"transparent" }}type="submit" value="Create">Create</Button>
+        <div>
+        <a href="/"><i class="fal fa-chevron-left"></i></a>
+        </div>
+          
+      </Form>
     </div>
   );
 };
