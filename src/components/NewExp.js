@@ -25,7 +25,7 @@ const NewExp = () => {
       tags,
       hostname
     };
-    const newExp = await fetch("http://localhost:5000/experiences", {
+    const newExp = await fetch("https://myhause.herokuapp.com/experiences", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

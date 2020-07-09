@@ -13,7 +13,7 @@ export default function UpdatePage() {
   const [duration, setDuration] = useState(0);
   const [whatToBring, setWhatToBring] = useState([]);
   const getData = async () => {
-    const getExp = await fetch(`http://localhost:5000/experiences/${expId}`);
+    const getExp = await fetch(`https://myhause.herokuapp.com/experiences/${expId}`);
     const data1 = await getExp.json();
     console.log("data", data1);
     setTitle(data1.data.title);
@@ -34,7 +34,7 @@ export default function UpdatePage() {
       duration: duration,
       whatToBring: whatToBring,
     };
-    const upExp = await fetch(`http://localhost:5000/exps`, {
+    const upExp = await fetch(`https://myhause.herokuapp.com/exps`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",

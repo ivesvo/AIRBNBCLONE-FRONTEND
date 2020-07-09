@@ -5,7 +5,7 @@ const WhatToBring = ({ items }) => {
 
   useEffect(() => {
     async function fetchData() {
-      const data = await fetch("http://localhost:5000/exps/update");
+      const data = await fetch("https://myhause.herokuapp.com/exps/update");
     }
   });
   return (
