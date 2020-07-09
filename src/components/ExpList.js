@@ -88,7 +88,7 @@ export default function ExperienceList() {
     } else {
         return (
             <div>
-                <Navbar />
+                
 
                 <Jumbotron />
                 <div className="tags">

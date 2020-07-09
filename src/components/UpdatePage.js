@@ -13,7 +13,7 @@ export default function UpdatePage() {
   const [duration, setDuration] = useState(0);
   const [whatToBring, setWhatToBring] = useState([]);
   const getData = async () => {
-    const getExp = await fetch(`http://localhost:5000/exps/${expId}`);
+    const getExp = await fetch(`http://localhost:5000/experiences/${expId}`);
     const data1 = await getExp.json();
     console.log("data", data1);
     setTitle(data1.data.title);
