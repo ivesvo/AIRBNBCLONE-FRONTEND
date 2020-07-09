@@ -8,9 +8,11 @@ export default function Jumbotron() {
     return (
         <div>
              <div className="jumbotron" style={{
-            backgroundImage:`url("https://imagesvc.meredithcorp.io/v3/mm/image?q=85&c=sc&poi=face&w=1600&h=838&url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F28%2F2020%2F04%2F08%2Fairbnb-virtual-experiences-BNBV0420.jpg")`, 
+            backgroundImage:`url("https://static01.nyt.com/images/2019/01/07/smarter-living/family-technology-guide-slide-68E2/family-technology-guide-slide-68E2-jumbo-v2.gif")`, 
             backgroundImageWidth: '100vw',
-            backgroundSize: "cover"
+            
+            
+            backgroundSize: "90%"
         }} >
             <Row className="title">
             <Col lg={3}>

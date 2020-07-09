@@ -8,7 +8,7 @@
 
 .jumbotron{
   width: 100vw;
- height: 80vh;
+ height: 100vh;
  margin-bottom: 0px !important;
   
 }
@@ -108,7 +108,7 @@ h4{
 }
 
 .slider{
-  width: 25vw;
+  width: 28vw;
   height: 150px;
   z-index: 999999;
   border: 1px solid lightgray !important;

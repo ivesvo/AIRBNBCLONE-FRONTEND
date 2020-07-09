@@ -1,6 +1,6 @@
-import React, {useEffect,useState} from "react";
-import { useParams } from "react-router-dom";
-import { Row, Container, Col, Button, Badg,Navbar, Badge } from "react-bootstrap";
+import React, { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
+import { Row, Container, Col, Button, Badg, Navbar, Badge } from "react-bootstrap";
 import "./Detail.css";
 import ExpList from "./ExpList";
 import Footer from './Footer'
@@ -14,24 +14,24 @@ import axios from 'axios'
 
 
 export default function DetailExp() {
-  let [experience,setExperience] = useState([]);
+  let [experience, setExperience] = useState([]);
   let { expId } = useParams();
 
   useEffect(() => {
     axios.get(`http://localhost:5000/experiences/${expId}`).then((res) => {
-        console.log(res.data.data)
-        setExperience(res.data.data)
+      console.log(res.data.data)
+      setExperience(res.data.data)
     })
-}, []); // avoiding infinite loop
-  if(experience.length == 0)
+  }, []); // avoiding infinite loop
+  if (experience.length == 0)
     return <></>
-  
+
   return (
     <div>
-      <NavbarDetail/>
+      <NavbarDetail />
       <div className="banner">
         <Container>
-          
+
           {/* <Row>
             <Col lg={2} md={2} sm={2}>
             <Navbar.Brand href="/exps"><img style={{marginLeft:"30px"}} alt="logo" width="130" src="https://japanesquest.com/wp-content/uploads/2017/10/airbnb-logo.png" /></Navbar.Brand>
@@ -74,7 +74,7 @@ export default function DetailExp() {
             </Col>
           </Row> */}
 
-          <Row style={{marginTop:"20px"}}>
+          <Row style={{ marginTop: "20px" }}>
             <img
               width={320}
               height={448}
@@ -93,7 +93,7 @@ export default function DetailExp() {
                 width={155}
                 height={222}
                 src={experience.pictureURL[2]}
-                />
+              />
 
               <img
                 height={221}
@@ -115,8 +115,8 @@ export default function DetailExp() {
 
           <Row>
             <Col lg={4}>
-              <Badge variant="light" style={{marginTop:"20px"}} className="badge-detail">
-              <i class="fas fa-play"></i> ONLINE EXPERIENCE
+              <Badge variant="light" style={{ marginTop: "20px" }} className="badge-detail">
+                <i class="fas fa-play"></i> ONLINE EXPERIENCE
               </Badge>
               {/* <div> {title}</div>
             <div>{country}</div> */}
@@ -125,9 +125,13 @@ export default function DetailExp() {
                 <h3>{experience.title}</h3>
                 <h6>{experience.country}</h6>
                 <Badge variant="secondary">
-                  {/* {experience.tag[0].populate()} */}
-                  Cooking
-                  {/* {badge} */}
+                 
+                  <div>
+                    <Button>
+                      <Link to={`update/${expId}/`}>Update</Link>
+                    </Button>
+                    <Button>Delete</Button>
+                  </div>
                 </Badge>
               </div>
             </Col>
@@ -135,7 +139,7 @@ export default function DetailExp() {
             <Col lg={8}>
               <div className="line">
                 <h6>
-                  <img width="25px" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/pager_1f4df.png"/>  Book and join this experience from your computer, phone, or
+                  <img width="25px" src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/237/pager_1f4df.png" />  Book and join this experience from your computer, phone, or
                   tablet.
                 </h6>
               </div>
@@ -160,11 +164,11 @@ export default function DetailExp() {
           </Row>
         </Container>
       </div>
-      <Description description={experience.description}/>
+      <Description description={experience.description} />
       <YourHost description={experience.description} hostname={experience.hostname} hostpictureURL={experience.hostpictureURL
-}/>
-      <WhatToBring items={experience.items}/>
-      <Footer/>
+      } />
+      <WhatToBring items={experience.items} />
+      <Footer />
     </div>
   );
 }
