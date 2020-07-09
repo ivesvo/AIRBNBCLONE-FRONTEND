@@ -29,11 +29,11 @@ export default function ExperienceList() {
     const ref = useRef(null);
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/experiences/?page=${pageNumber}&?minPrice=${minPrice}&maxPrice=${maxPrice}`).then((res) => {
+        axios.get(`https://myhause.herokuapp.com/experiences/?page=${pageNumber}&?minPrice=${minPrice}&maxPrice=${maxPrice}`).then((res) => {
             console.log(res.data.data)
             setExperience(res.data.data)
     })
-            axios.get(`http://localhost:5000/tags/`).then((res) => {
+            axios.get(`https://myhause.herokuapp.com/tags/`).then((res) => {
                 console.log(res.data.data)
                 setTags(res.data.data)   
 
@@ -64,7 +64,7 @@ export default function ExperienceList() {
       const handleTagsClick = (e) =>{
         const tag = tags.find((item)=>item.tag === e.tag)
         console.log(tag)
-        axios.get(`http://localhost:5000/tags/${tag._id}`).then((res) => {
+        axios.get(`https://myhause.herokuapp.com/tags/${tag._id}`).then((res) => {
             console.log(res.data.data)
             setExperience(res.data.data)
 

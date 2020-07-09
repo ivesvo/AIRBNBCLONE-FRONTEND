@@ -29,7 +29,7 @@ function App() {
     console.log(data)
     console.log(data.accessToken)
     if (data && data.accessToken) {
-        const res = await fetch(`http://localhost:5000/auth/login/facebook?token=${data.accessToken}`)
+        const res = await fetch(`https://myhause.herokuapp.com/auth/login/facebook?token=${data.accessToken}`)
         if (res.ok) {
             const dt = await res.json()
             console.log("dt", dt)
@@ -69,7 +69,7 @@ function App() {
           return
         }
 
-        const res = await fetch(`http://localhost:5000/users/me`, {
+        const res = await fetch(`https://myhause.herokuapp.com/users/me`, {
             headers: {
                 authorization: `Bearer ${token}`,
                 "Content-type": "application/json"
